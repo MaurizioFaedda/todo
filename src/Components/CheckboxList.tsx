@@ -41,6 +41,7 @@ export default function CheckboxList({ todoList, deleteTask, deleteCompleteTasks
     const [checked, setChecked] = useState([0]);
     const [show, setShow] = useState([0]);
 
+    // function per mostrare/nascondere descrizione 
     const showClick = (value: number) => () => {
         const currentIndex = show.indexOf(value);
         const newShowed = [...show];
@@ -53,6 +54,7 @@ export default function CheckboxList({ todoList, deleteTask, deleteCompleteTasks
         setShow(newShowed);
     };
 
+    // function per salvare item correnti in checked 
     const handleToggle = (value: number) => () => {
         const currentIndex = checked.indexOf(value);
         const newChecked = [...checked];
@@ -134,7 +136,6 @@ export default function CheckboxList({ todoList, deleteTask, deleteCompleteTasks
                                 </ListItem>
                             </List>
                         </Collapse>
-
                     </div>
                 );
             })}

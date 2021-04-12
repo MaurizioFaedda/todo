@@ -1,5 +1,4 @@
 import React, { KeyboardEvent, ChangeEvent, useState, useEffect } from 'react';
-// import TodoTask from './Components/TodoTask';
 import { TaskTitleInput } from '../Components/TaskInput';
 import { TaskType } from '../TaskType';
 import Collapse from '@material-ui/core/Collapse';
@@ -11,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CheckboxList from '../Components/CheckboxList';
 
+// counter per nuovo id task
 let count = 4;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -39,7 +39,7 @@ const Master = () => {
 
   const classes = useStyles();
 
-
+  // use state
   const [task, setTask] = useState<any>("");
   const [description, setDescription] = useState<string>("");
   const [todoList, setTodoList] = useState<TaskType[]>([]);
@@ -136,7 +136,6 @@ const Master = () => {
               {/* aggiungi nuova attività */}
               <Buttons text="Aggiungi attivita" action={addTask} />
             </Collapse>
-
 
             {/* lista attività */}
             <CheckboxList

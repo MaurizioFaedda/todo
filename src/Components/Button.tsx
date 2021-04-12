@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
+// props funzione con parametro per personalizzazione btn
 type Props = {
     action(parameter: any): void;
     parameter?: any;
@@ -25,7 +26,6 @@ export default function Buttons({ action, parameter, text }: Props) {
     return (
         <div>
             <Button
-
                 variant="outlined"
                 className={classes.button}
                 onClick={() => { action(parameter) }}

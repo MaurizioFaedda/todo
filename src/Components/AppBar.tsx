@@ -7,8 +7,6 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import IconButton from '@material-ui/core/IconButton';
 
-
-
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -31,11 +29,11 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
+
 type Props = {
     showInputTask(): void;
     open: any;
 }
-
 
 export default function ButtonAppBar({ showInputTask, open }: Props) {
     const classes = useStyles();
