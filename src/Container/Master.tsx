@@ -70,8 +70,13 @@ const Master = () => {
 
   // salvo la nuova attività al click
   const addTask = () => {
-    const newItem = { id: count++, taskName: task, descriptionInfo: description }
-    setTodoList([newItem, ...todoList])
+    if (task === "" || task === " ") {
+      const newItem = { id: count++, taskName: 'Senza Titolo', descriptionInfo: description }
+      setTodoList([newItem, ...todoList])
+    } else {
+      const newItem = { id: count++, taskName: task, descriptionInfo: description }
+      setTodoList([newItem, ...todoList])
+    }
     setTask("")
     setDescription("")
   }

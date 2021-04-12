@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Master from './Master/App';
+import Master from './Container/Master';
 import reportWebVitals from './reportWebVitals';
 import './App.css';
 

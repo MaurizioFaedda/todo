@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,9 +25,9 @@ export default function Buttons({ action, parameter, text }: Props) {
     return (
         <div>
             <Button
+
                 variant="outlined"
                 className={classes.button}
-                startIcon={<DeleteIcon />}
                 onClick={() => { action(parameter) }}
             >
                 {text}
